@@ -9,6 +9,7 @@ def modification(lst):
     lst.insert(0, x)
     return lst
 
+
 # Ниже НИЧЕГО НЕ НАДО ИЗМЕНЯТЬ
 
 
