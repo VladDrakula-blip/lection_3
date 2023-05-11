@@ -13,6 +13,7 @@ def flatten_and_sort(array):
         result_list += sublist
     result_list.sort()
 
+
     return result_list
 
 # Ниже НИЧЕГО НЕ НАДО ИЗМЕНЯТЬ

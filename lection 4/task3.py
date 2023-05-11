@@ -14,6 +14,7 @@ def sum_digits(num):
     for digit in num_str:
         our_sum += int(digit)
 
+
     return our_sum
 
 # Ниже НИЧЕГО НЕ НАДО ИЗМЕНЯТЬ

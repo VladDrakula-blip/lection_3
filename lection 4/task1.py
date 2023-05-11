@@ -16,6 +16,7 @@ def which_triangle(a, b, c):
             type_triangle = "Обычный"
     else:
         type_triangle = "Не треугольник"
+
     return type_triangle
 
 # Ниже НИЧЕГО НЕ НАДО ИЗМЕНЯТЬ

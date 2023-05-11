@@ -18,6 +18,7 @@ def multiplication_chain(num):
             num *= digit
         count_multy += 1
 
+
     return count_multy
 
 # Ниже НИЧЕГО НЕ НАДО ИЗМЕНЯТЬ
