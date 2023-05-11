@@ -4,6 +4,15 @@
 
 def move_zeros(lst):
     # Здесь нужно написать код
+
+    count = 0
+    for i in range(len(lst)):
+        if lst[i] == 0:
+            count += 1
+        elif count > 0:
+            lst[i - count] = lst[i]
+            lst[i] = 0
+
     return lst
 
 # Ниже НИЧЕГО НЕ НАДО ИЗМЕНЯТЬ
