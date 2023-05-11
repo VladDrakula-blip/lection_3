@@ -12,7 +12,7 @@ def move_zeros(lst):
         elif count > 0:
             lst[i - count] = lst[i]
             lst[i] = 0
-
+            
     return lst
 
 # Ниже НИЧЕГО НЕ НАДО ИЗМЕНЯТЬ
