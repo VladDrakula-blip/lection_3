@@ -20,6 +20,21 @@
 
 def everything_for_your_cat(cats_data):
     # Здесь нужно написать код
+    owners_data = {}
+    for cat in cats_data:
+        owner = cat[2] + " " + cat[3]  # Имя покупателя и фамилия объединяются в ключ словаря
+        if owner in owners_data:
+            owners_data[owner].append(cat[:2])  # Добавляем данные о коте в список для данного владельца
+        else:
+            owners_data[owner] = [cat[:2]]  # Создаем новую запись для владельца
+
+    our_str = ""
+    for owner, cats in owners_data.items():
+        our_str += f"{owner}: "
+        cat_info = [f"{cat[0]}, {cat[1]}" for cat in cats]  # Формируем информацию о котах в виде строки
+        our_str += "; ".join(cat_info)  # Объединяем информацию о котах через точку с запятой
+        our_str += "\n"
+
     return our_str
 
 # Ниже НИЧЕГО НЕ НАДО ИЗМЕНЯТЬ

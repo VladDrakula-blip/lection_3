@@ -8,6 +8,16 @@
 
 def repeats(our_str):
     # Здесь нужно написать код
+
+    char_counts = {}
+    new_str = ""
+    for char in our_str:
+        if char in char_counts:
+            char_counts[char] += 1
+        else:
+            char_counts[char] = 1
+        new_str += char + "_" + str(char_counts[char])
+
     return new_str
 
 # Ниже НИЧЕГО НЕ НАДО ИЗМЕНЯТЬ

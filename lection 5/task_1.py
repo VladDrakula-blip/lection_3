@@ -8,6 +8,11 @@
 
 def letter_stat(our_str):
     # Здесь нужно написать код
+
+    letters_dict = {}
+    for letter in our_str:
+        if letter.isalpha():
+            letters_dict[letter] = letters_dict.get(letter, 0) + 1
     return letters_dict
 
 # Ниже НИЧЕГО НЕ НАДО ИЗМЕНЯТЬ

@@ -15,6 +15,25 @@
 
 def scrabble(word):
     # Здесь нужно написать код
+    points = 0
+    for letter in word:
+        if letter.lower() in ['а', 'в', 'е', 'ё', 'и', 'н', 'о', 'р', 'с', 'т']:
+            points += 1
+        elif letter.lower() in ['д', 'к', 'л', 'м', 'п', 'у']:
+            points += 2
+        elif letter.lower() in ['б', 'г', 'ь', 'я']:
+            points += 3
+        elif letter.lower() in ['й', 'ы']:
+            points += 4
+        elif letter.lower() in ['ж', 'з', 'х', 'ц', 'ч']:
+            points += 5
+        elif letter.lower() in ['ф', 'ш', 'э', 'ю']:
+            points += 8
+        elif letter.lower() == 'щ' or letter.lower() == 'а':
+            points += 10
+        elif letter.lower() == 'ъ':
+            points += 15
+
     return points
 
 # Ниже НИЧЕГО НЕ НАДО ИЗМЕНЯТЬ
