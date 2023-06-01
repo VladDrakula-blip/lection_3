@@ -14,25 +14,26 @@ import math
 
 
 class Segment:
-    def __init__(self, point1, point2):
-        self.point1 = point1
-        self.point2 = point2
 
-    def length(self):
-        x1, y1 = self.point1
-        x2, y2 = self.point2
-        dist = math.sqrt((x2 - x1) ** 2 + (y2 - y1) ** 2)
-        return round(dist, 2)
+        def __init__(self, point1, point2):
+            self.x1, self.y1 = point1
+            self.x2, self.y2 = point2
 
-    def x_axis_intersection(self):
-        _, y1 = self.point1
-        _, y2 = self.point2
-        return y1 * y2 <= 0
+        def length(self):
+            distance = math.sqrt((self.x2 - self.x1) ** 2 + (self.y2 - self.y1) ** 2)
+            return round(distance, 2)
 
-    def y_axis_intersection(self):
-        x1, _ = self.point1
-        x2, _ = self.point2
-        return x1 * x2 <= 0
+        def x_axis_intersection(self):
+            if (self.y1 > 0 and self.y2 < 0) or (self.y1 < 0 and self.y2 > 0):
+                return True
+            return False
+
+        def y_axis_intersection(self):
+            if (self.x1 > 0 and self.x2 < 0) or (self.x1 < 0 and self.x2 > 0):
+                return True
+            return False
+
+
 # Ниже НИЧЕГО НЕ НАДО ИЗМЕНЯТЬ
 
 
